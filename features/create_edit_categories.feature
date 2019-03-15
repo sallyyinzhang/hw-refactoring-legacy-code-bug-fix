@@ -6,7 +6,7 @@ Feature: Create categories
   Background:
     Given the blog is set up
     And I am logged into the admin panel
-   Scenario: Successfully Create categories
+   Scenario: Successfully Create and edit categories
     Given I am on the new categories page
     When I fill in "category_name" with "books"
     And I fill in "category_keywords" with "romantic"
@@ -17,7 +17,7 @@ Feature: Create categories
     Then I should see "romantic"
     Then I should see "yes"
     Then I should see "desc"
-     Then I follow "books"
+    Then I follow "books"
     When I fill in "category_name" with "books1"
     And I fill in "category_keywords" with "romantic1"
     And I fill in "category_permalink" with "yes1"
